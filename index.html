@@ -1,102 +1,649 @@
+```html
 <!doctype html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>라무몰 추천인 코드 | 할인코드·쿠폰 안내</title>
+
 <meta name="description" content="라무몰 추천인 코드와 할인코드·쿠폰 정보를 한눈에 확인하고 바로 이동할 수 있는 안내 페이지입니다.">
+
 <meta name="robots" content="index,follow">
+
 <link rel="canonical" href="https://ramumall.vercel.app/">
+
 <meta property="og:type" content="website">
 <meta property="og:title" content="라무몰 추천인 코드 | 할인코드·쿠폰 안내">
 <meta property="og:description" content="라무몰 추천인 코드와 할인코드·쿠폰 정보를 간단하게 확인하세요.">
 <meta property="og:url" content="https://ramumall.vercel.app/">
+
 <style>
-:root{--bg:#f5f7fb;--card:#fff;--text:#101828;--muted:#667085;--line:#e4e7ec;--accent:#635bff;--accent2:#7c3aed}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;background:var(--bg);color:var(--text)}
-a{text-decoration:none;color:inherit}.wrap{max-width:980px;margin:auto;padding:0 20px}
-.hero{padding:28px 0 18px}.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px}.logo{font-weight:800;letter-spacing:-.03em;font-size:20px}.badge{font-size:12px;color:#475467;background:#fff;border:1px solid var(--line);padding:8px 12px;border-radius:999px}
-.hero-card{background:linear-gradient(135deg,#111827 0%,#312e81 55%,#5b21b6 100%);border-radius:28px;padding:48px;color:white;box-shadow:0 18px 50px rgba(31,41,55,.18)}
-.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.75;font-weight:700}.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.08;letter-spacing:-.055em;margin:14px 0 16px}.hero p{font-size:17px;line-height:1.65;color:#e5e7eb;max-width:650px;margin:0}
-.code-row{display:flex;gap:10px;align-items:stretch;margin-top:30px;max-width:610px}.code{flex:1;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:16px 18px;font-size:22px;font-weight:800;letter-spacing:.04em}.copy{border:0;border-radius:16px;padding:0 22px;font-size:15px;font-weight:800;cursor:pointer;background:white;color:#111827}.copy:active{transform:translateY(1px)}#status{font-size:13px;margin-top:10px;color:#d1fae5;min-height:18px}
-.actions{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}.primary{display:flex;justify-content:center;align-items:center;gap:8px;background:white;color:#111827;padding:18px 20px;border-radius:16px;font-weight:900;font-size:17px}.primary span{font-size:20px}
-.section{padding:28px 0}.section h2{font-size:27px;letter-spacing:-.04em;margin:0 0 10px}.section-intro{color:var(--muted);line-height:1.7;margin:0 0 20px}
-.about{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;line-height:1.8;color:#475467}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}.num{width:32px;height:32px;display:grid;place-items:center;border-radius:10px;background:#eef2ff;color:#4338ca;font-weight:900;margin-bottom:15px}.step h3{margin:0 0 7px;font-size:17px}.step p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
-.keywords{display:flex;flex-wrap:wrap;gap:8px}.tag{background:#fff;border:1px solid var(--line);padding:8px 11px;border-radius:999px;color:#475467;font-size:13px}
-.notice{font-size:13px;color:#667085;line-height:1.7;background:#eef2f6;border-radius:16px;padding:16px}.notice strong{color:#344054}.footer{padding:10px 0 42px;color:#98a2b3;font-size:12px;text-align:center}
-@media(max-width:650px){.hero-card{padding:30px 22px;border-radius:22px}.nav{margin-bottom:24px}.badge{display:none}.code-row{flex-direction:column}.code,.copy{min-height:54px}.copy{padding:0 16px}.steps{grid-template-columns:1fr}.hero h1{font-size:39px}}
+:root{
+  --bg:#f5f7fb;
+  --card:#fff;
+  --text:#101828;
+  --muted:#667085;
+  --line:#e4e7ec;
+  --accent:#635bff;
+  --accent2:#7c3aed
+}
+
+*{
+  box-sizing:border-box
+}
+
+html{
+  scroll-behavior:smooth
+}
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+  background:var(--bg);
+  color:var(--text)
+}
+
+a{
+  text-decoration:none;
+  color:inherit
+}
+
+.wrap{
+  max-width:980px;
+  margin:auto;
+  padding:0 20px
+}
+
+.hero{
+  padding:28px 0 18px
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:48px
+}
+
+.logo{
+  font-weight:800;
+  letter-spacing:-.03em;
+  font-size:20px
+}
+
+.badge{
+  font-size:12px;
+  color:#475467;
+  background:#fff;
+  border:1px solid var(--line);
+  padding:8px 12px;
+  border-radius:999px
+}
+
+.hero-card{
+  background:linear-gradient(
+    135deg,
+    #111827 0%,
+    #312e81 55%,
+    #5b21b6 100%
+  );
+  border-radius:28px;
+  padding:48px;
+  color:white;
+  box-shadow:0 18px 50px rgba(31,41,55,.18)
+}
+
+.eyebrow{
+  font-size:13px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  opacity:.75;
+  font-weight:700
+}
+
+.hero h1{
+  font-size:clamp(34px,6vw,58px);
+  line-height:1.08;
+  letter-spacing:-.055em;
+  margin:14px 0 16px
+}
+
+.hero p{
+  font-size:17px;
+  line-height:1.65;
+  color:#e5e7eb;
+  max-width:650px;
+  margin:0
+}
+
+.code-row{
+  display:flex;
+  gap:10px;
+  align-items:stretch;
+  margin-top:30px;
+  max-width:610px
+}
+
+.code{
+  flex:1;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:16px;
+  padding:16px 18px;
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:.04em
+}
+
+/* 하나의 큰 복사 + 바로가기 버튼 */
+
+.copy-go{
+  width:100%;
+  margin-top:12px;
+  min-height:64px;
+  border:0;
+  border-radius:16px;
+  padding:16px 20px;
+  font-size:17px;
+  font-weight:900;
+  cursor:pointer;
+  background:#fff;
+  color:#111827;
+  box-shadow:0 8px 24px rgba(0,0,0,.14);
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease,
+    background .15s ease
+}
+
+.copy-go:hover{
+  transform:translateY(-1px);
+  box-shadow:0 12px 28px rgba(0,0,0,.18)
+}
+
+.copy-go:active{
+  transform:translateY(1px)
+}
+
+#status{
+  font-size:13px;
+  margin-top:10px;
+  color:#d1fae5;
+  min-height:18px
+}
+
+.actions{
+  display:none
+}
+
+.section{
+  padding:28px 0
+}
+
+.section h2{
+  font-size:27px;
+  letter-spacing:-.04em;
+  margin:0 0 10px
+}
+
+.section-intro{
+  color:var(--muted);
+  line-height:1.7;
+  margin:0 0 20px
+}
+
+.about{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:24px;
+  line-height:1.8;
+  color:#475467
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px
+}
+
+.step{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:22px
+}
+
+.num{
+  width:32px;
+  height:32px;
+  display:grid;
+  place-items:center;
+  border-radius:10px;
+  background:#eef2ff;
+  color:#4338ca;
+  font-weight:900;
+  margin-bottom:15px
+}
+
+.step h3{
+  margin:0 0 7px;
+  font-size:17px
+}
+
+.step p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6
+}
+
+.keywords{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px
+}
+
+.tag{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:8px 11px;
+  border-radius:999px;
+  color:#475467;
+  font-size:13px
+}
+
+.notice{
+  font-size:13px;
+  color:#667085;
+  line-height:1.7;
+  background:#eef2f6;
+  border-radius:16px;
+  padding:16px
+}
+
+.notice strong{
+  color:#344054
+}
+
+.footer{
+  padding:10px 0 42px;
+  color:#98a2b3;
+  font-size:12px;
+  text-align:center
+}
+
+@media(max-width:650px){
+
+  .hero-card{
+    padding:30px 22px;
+    border-radius:22px
+  }
+
+  .nav{
+    margin-bottom:24px
+  }
+
+  .badge{
+    display:none
+  }
+
+  .code-row{
+    flex-direction:column
+  }
+
+  .code,
+  .copy-go{
+    min-height:58px
+  }
+
+  .copy-go{
+    font-size:16px
+  }
+
+  .steps{
+    grid-template-columns:1fr
+  }
+
+  .hero h1{
+    font-size:39px
+  }
+}
 </style>
 </head>
+
 <body>
+
 <main class="wrap">
+
   <section class="hero">
-    <div class="nav"><div class="logo">RAMUMALL GUIDE</div><div class="badge">추천인 코드 안내</div></div>
+
+    <div class="nav">
+
+      <div class="logo">
+        RAMUMALL GUIDE
+      </div>
+
+      <div class="badge">
+        추천인 코드 안내
+      </div>
+
+    </div>
+
+
     <div class="hero-card">
-      <div class="eyebrow">Referral Code</div>
-      <h1>라무몰<br>추천인 코드</h1>
-      <p>추천인 코드를 확인하고 라무몰로 바로 이동할 수 있도록 간단하게 정리했습니다.</p>
+
+      <div class="eyebrow">
+        Referral Code
+      </div>
+
+
+      <h1>
+        라무몰<br>
+        추천인 코드
+      </h1>
+
+
+      <p>
+        추천인 코드를 확인하고 라무몰로 바로 이동할 수 있도록
+        간단하게 정리했습니다.
+      </p>
+
+
       <div class="code-row">
-        <div class="code" id="code">ref4025169</div>
-        <button class="copy" id="copyBtn">코드 복사</button>
+
+        <div
+          class="code"
+          id="code"
+        >
+          ref4025169
+        </div>
+
       </div>
-      <div id="status" aria-live="polite"></div>
-      <div class="actions">
-        <a class="primary" href="https://ramu-mall.org/?raf=ref4025169" target="_blank" rel="nofollow noopener noreferrer">
-          라무몰 바로가기 <span>→</span>
-        </a>
-      </div>
+
+
+      <!-- 복사 + 바로가기 통합 버튼 -->
+
+      <button
+        class="copy-go"
+        id="copyBtn"
+        type="button"
+      >
+        추천인 코드 복사하고 바로가기 →
+      </button>
+
+
+      <div
+        id="status"
+        aria-live="polite"
+      ></div>
+
     </div>
+
   </section>
 
+
   <section class="section">
-    <h2>라무몰은 어떤 곳인가요?</h2>
-    <p class="section-intro">라무몰 관련 할인코드와 추천인 코드를 확인하고 외부 사이트로 이동할 수 있도록 만든 안내 페이지입니다.</p>
+
+    <h2>
+      라무몰은 어떤 곳인가요?
+    </h2>
+
+    <p class="section-intro">
+      라무몰은 사쿠라허브,델리샵과 더불어 직구 3대장 사이트로서
+      각종 영양제 및 기능식품들을 저렴히 직구할 수 있는 곳입니다.
+    </p>
+
     <div class="about">
-      이 페이지에서는 <strong>추천인 코드 ref4025169</strong>를 빠르게 확인할 수 있습니다.
-      이용 전에는 연결되는 외부 사이트의 상품 정보, 가격, 배송 조건 및 관련 법규를 직접 확인해 주세요.
+
+      이 페이지에서는
+      <strong>추천인 코드 ref4025169</strong>
+      를 빠르게 확인할 수 있습니다.
+
+      이용 전에는 연결되는 외부 사이트의
+      상품 정보, 가격, 배송 조건 및 관련 법규를
+      직접 확인해 주세요.
+
     </div>
+
   </section>
 
+
   <section class="section">
-    <h2>이용 방법</h2>
-    <p class="section-intro">복잡한 과정 없이 한 번에 이동할 수 있습니다.</p>
+
+    <h2>
+      이용 방법
+    </h2>
+
+    <p class="section-intro">
+      복잡한 과정 없이 한 번에 이동할 수 있습니다.
+    </p>
+
+
     <div class="steps">
-      <div class="step"><div class="num">1</div><h3>추천인 코드 확인</h3><p>ref4025169가 표시되어 있는지 확인합니다.</p></div>
-      <div class="step"><div class="num">2</div><h3>라무몰 바로가기</h3><p>버튼을 누르면 추천인 코드가 포함된 연결 주소로 이동합니다.</p></div>
-      <div class="step"><div class="num">3</div><h3>외부 사이트 확인</h3><p>최신 상품·가격·이용조건은 연결된 사이트에서 확인합니다.</p></div>
+
+      <div class="step">
+
+        <div class="num">
+          1
+        </div>
+
+        <h3>
+          추천인 코드 확인
+        </h3>
+
+        <p>
+          ref4025169가 표시되어 있는지 확인합니다.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="num">
+          2
+        </div>
+
+        <h3>
+          복사하고 바로가기
+        </h3>
+
+        <p>
+          버튼을 누르면 추천인 코드가 복사되고
+          연결 주소로 바로 이동합니다.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="num">
+          3
+        </div>
+
+        <h3>
+          외부 사이트 확인
+        </h3>
+
+        <p>
+          최신 상품·가격·이용조건은
+          연결된 외부 사이트에서 확인합니다.
+        </p>
+
+      </div>
+
     </div>
+
   </section>
 
+
   <section class="section">
-    <h2>관련 정보</h2>
-    <p class="section-intro">라무몰, 할인코드, 할인쿠폰, 추천인 코드 등 관련 정보를 찾는 분들을 위한 안내 페이지입니다.</p>
+
+    <h2>
+      관련 정보
+    </h2>
+
+    <p class="section-intro">
+      라무몰, 할인코드, 할인쿠폰, 추천인 코드 등
+      관련 정보를 찾는 분들을 위한 안내 페이지입니다.
+    </p>
+
+
     <div class="keywords">
-      <span class="tag">라무몰</span><span class="tag">할인코드</span><span class="tag">할인쿠폰</span><span class="tag">추천인</span><span class="tag">쿠폰</span>
-      <span class="tag">사쿠라허브</span><span class="tag">델리샵</span><span class="tag">직구</span><span class="tag">인도직구</span>
+
+      <span class="tag">
+        라무몰
+      </span>
+
+      <span class="tag">
+        할인코드
+      </span>
+
+      <span class="tag">
+        할인쿠폰
+      </span>
+
+      <span class="tag">
+        추천인
+      </span>
+
+      <span class="tag">
+        쿠폰
+      </span>
+
+      <span class="tag">
+        사쿠라허브
+      </span>
+
+      <span class="tag">
+        델리샵
+      </span>
+
+      <span class="tag">
+        직구
+      </span>
+
+      <span class="tag">
+        인도직구
+      </span>
+
     </div>
+
   </section>
 
+
   <section class="section">
-    <div class="notice"><strong>안내</strong><br>
-      본 페이지는 추천인 코드 및 외부 연결 정보를 제공하는 안내 페이지입니다. 연결된 외부 사이트의 상품·서비스 및 구매 가능 여부를 보증하지 않습니다.
-      의약품 등 규제 대상 품목은 국내 법령, 처방·통관 요건 등을 반드시 확인하시기 바랍니다.
+
+    <div class="notice">
+
+      <strong>
+        안내
+      </strong>
+
+      <br>
+
+      본 페이지는 추천인 코드 및 외부 연결 정보를
+      제공하는 안내 페이지입니다.
+
+      연결된 외부 사이트의 상품·서비스 및
+      구매 가능 여부를 보증하지 않습니다.
+
+      의약품 등 규제 대상 상품은 국내 법령,
+      처방·통관 요건 등을 반드시 확인하시기 바랍니다.
+
     </div>
+
   </section>
-  <div class="footer">© 2026 RAMUMALL GUIDE · 별도 운영 안내 페이지</div>
+
+
+  <div class="footer">
+
+    © 2026 RAMUMALL GUIDE · 별도 운영 안내 페이지
+
+  </div>
+
 </main>
+
+
 <script>
-const code="ref4025169";
-document.getElementById("copyBtn").addEventListener("click", async ()=>{
-  const status=document.getElementById("status");
-  try{
-    await navigator.clipboard.writeText(code);
-    status.textContent="추천인 코드가 복사되었습니다.";
-  }catch(e){
-    const ta=document.createElement("textarea");ta.value=code;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();
-    status.textContent="추천인 코드가 복사되었습니다.";
+
+const code = "ref4025169";
+
+const target =
+  "https://ramu-mall.org/?raf=ref4025169";
+
+const button =
+  document.getElementById("copyBtn");
+
+const status =
+  document.getElementById("status");
+
+
+button.addEventListener(
+  "click",
+  async function () {
+
+    /*
+      추천인 코드 복사
+    */
+
+    try {
+
+      await navigator.clipboard.writeText(code);
+
+    } catch (error) {
+
+      const textarea =
+        document.createElement("textarea");
+
+      textarea.value = code;
+
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+
+      document.body.appendChild(textarea);
+
+      textarea.focus();
+      textarea.select();
+
+      try {
+        document.execCommand("copy");
+      } catch (e) {
+        // 복사 실패해도 이동은 계속
+      }
+
+      document.body.removeChild(textarea);
+
+    }
+
+
+    /*
+      사용자에게 복사 완료 표시
+    */
+
+    status.textContent =
+      "추천인 코드가 복사되었습니다. 라무몰로 이동합니다.";
+
+
+    /*
+      0.3초 뒤 바로가기
+    */
+
+    setTimeout(function () {
+
+      window.location.href = target;
+
+    }, 300);
+
   }
-});
+
+);
+
 </script>
+
 </body>
 </html>
+```
