@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ramumall.vercel.app/sitemap.xml
+#DaumWebMasterTool:e9b9e5e693ee87cc99bc158d738b88f9feaf0e018fad07d0058f76618d64b16d:fOHAHR7ZMaXDuustEduD4Q==
